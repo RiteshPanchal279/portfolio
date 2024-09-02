@@ -1,0 +1,101 @@
+@import "../../app.scss";
+
+
+.hero{
+   height:calc(100vh - 100px) ;
+   background:linear-gradient(180deg,#0c0c1d,#111132);
+   overflow: hidden;
+   position: relative;
+
+   
+
+   .wrapper{
+      max-width: 1366px;
+      // height: 100%;
+      margin:auto;
+      @include mobile{
+         margin-top: -100px;
+         margin-left: -90px;
+      }
+
+      .textContainer{
+         width: 65%;
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 40px;
+
+         @include mobile{
+            gap: 40px;
+         }
+         
+
+         h2{
+            font-size: 30px;
+            color: #9ba5fe;
+            letter-spacing: 10px;
+         }
+         h1{
+            width: 100px;
+            @include mobile{
+               width: 230px;
+            }
+         }
+         .buttons{
+            button{
+               padding: 20px;
+               border-radius: 10px;
+               border: 1px solid white;
+               background-color: transparent;
+               color: white;
+               margin-right: 20px;
+               cursor: pointer;
+               font-weight: 300;
+
+               @include mobile{
+                  padding: 10px;
+               }
+            }
+         }
+
+         .simg{
+            width: 50px;
+            height: 60px;
+         }
+      }
+
+      
+   }
+
+   .imageContainer{
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      // background-color: orange;
+      margin-right: 120px;
+      margin-top: 50px;
+
+      @include mobile{
+         opacity: 0;    
+        }
+      
+   }
+   .slidingTextContainer{
+      position: absolute;
+      font-size: 50vh;
+      bottom: -80px;
+      white-space: nowrap;
+      color: #ffffff09;
+      width: 50%;
+      font-weight: bold;
+
+      @include mobile{
+         font-size: 30vh;
+         margin-bottom: 50px;
+      }
+   }
+   
+}
